@@ -1,0 +1,58 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewBag.Title - My ASP.NET Application</title>
+    <link href="~/Content/Site.css" rel="stylesheet" type="text/css" />
+    <link href="~/Content/bootstrap.min.css" rel="stylesheet" type="text/css" />
+    <script src="~/Scripts/modernizr-2.6.2.js"></script>
+    <script src="~/Scripts/jquery-1.10.2.min.js"></script>
+
+    <style>
+        body {
+            background: #a3d5d3;
+            -webkit-transition: background 0.9s ease, color 0.6s ease;
+        }
+
+        .btn-1 {
+            border: 5px solid #fff;
+            color: #fff;
+        }
+
+        .btn {
+            background: #24b662;
+            cursor: pointer;
+            padding: 5px 15px;
+            display: inline-block;
+            font-weight: 700;
+            transition: all 0.5s;
+        }
+
+        .tex1 {
+            font-family: 'Times New Roman', Times, serif;
+            font-style: italic;
+        }
+    </style>
+
+</head>
+<body>
+    <div class="panel panel-info">
+        <div class="panel-heading">
+            <div class="panel-title">
+                <h3 class="text-center"><var><a href="/Home/Index">Phone Book</a></var></h3>
+            </div>
+        </div>
+    </div>
+    <div class="container body-content">
+        @RenderBody()
+        <hr />
+        <footer>
+
+            <p>&copy; @DateTime.Now.Year - Phone Book Application  @Html.ActionLink("Search Contact Name", "Index", "Search")</p>
+        </footer>
+    </div>
+    <script src="~/Scripts/bootstrap.min.js"></script>
+    <script src="~/Scripts/Deletemin.js"></script>
+</body>
+</html>

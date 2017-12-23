@@ -1,0 +1,45 @@
+﻿@model PhoneBook.Common.DTO.ContactDTO
+<head>
+    <style>
+        body {
+            background: #a3d5d3;
+            -webkit-transition: background 0.9s ease, color 0.6s ease;
+        }
+
+        .tex1 {
+            font-family: 'Times New Roman', Times, serif;
+            font-style: italic;
+        }
+    </style>
+</head>
+<div class="tex1">
+    <form method="post" action="EditContact">
+        @{
+            <table class="table">
+                <th>Contact Name </th>
+                <th>Feilds</th>
+                <tr>
+                    <td>@Html.EditorFor(model => model.Name)</td>
+                    <td><input type="hidden" value="@Model.Id" name="id" /></td>
+
+                    <td>
+                        <table class="table">
+                            @for (int i = 0; i < Model.ContactFields.Count(); i++)
+                            {
+                                <tr>
+                                    <td>@Html.HiddenFor(m => m.ContactFields[i].Id)</td>
+                                    <td>@Model.ContactFields[i].Field</td>
+                                    <td>@Html.HiddenFor(m => m.ContactFields[i].Field)</td>
+                                    <td>@Html.EditorFor(m => m.ContactFields[i].Value)</td>
+                                    <td>@Html.HiddenFor(m => m.ContactFields[i].ContactId)</td>
+                                </tr>
+                            }
+                        </table>
+                    </td>
+            </table>
+            <button type="submit" class="btn btn-primary">
+                <span class="glyphicon glyphicon-save"></span> Save
+            </button>
+        }
+    </form>
+</div>

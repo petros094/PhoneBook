@@ -1,0 +1,80 @@
+﻿@model List<PhoneBook.Common.DTO.ContactDTO>
+@{
+    ViewBag.Title = "Index";
+    Layout = null;
+}
+
+<html>
+<head>
+    <style>
+        body {
+            background: #a3d5d3;
+            text-align: center;
+            padding: 200px;
+        }
+
+        #namanyay-search-btn {
+            background: #0099ff;
+            color: white;
+            font: 'trebuchet ms', trebuchet;
+            padding: 10px 20px;
+            border-radius: 0 5px 5px 0;
+            -moz-border-radius: 0 5px 5px 0;
+            -webkit-border-radius: 0 5px 5px 0;
+            border: 0 none;
+            font-weight: bold;
+        }
+
+        #namanyay-search-box {
+            background: #eee;
+            padding: 10px;
+            border-radius: 5px 0 0 5px;
+            -moz-border-radius: 5px 0 0 5px;
+            -webkit-border-radius: 5px 0 0 5px;
+            border: 0 none;
+            width: 160px;
+        }
+    </style>
+</head>
+<body>
+    <div class="panel panel-info">
+        <div class="panel-heading">
+            <div class="panel-title">
+                <h3 class="text-center"><var><a href="/Home/Index">Go to Phone Book</a></var></h3>
+            </div>
+        </div>
+    </div>
+    <div>
+
+        <form id="searchthis" action="~/Search/Index" style="display:inline;" method="get">
+            <input id="namanyay-search-box" name="name" size="40" type="text" placeholder="Search Contact">
+            <input id="namanyay-search-btn" value="Go" type="submit" />
+        </form>
+        <div>
+            <table class="table">
+                @foreach (var contact in Model)
+            {
+                    <tr>
+                        <td>@contact.Name</td>
+                        <td>
+                            <table class="table">
+                                @foreach (var feild in contact.ContactFields)
+                                {
+
+                                    <tr>
+
+                                        <td>@feild.Field</td>
+                                        <td>@feild.Value</td>
+                                    </tr>
+                                }
+                            </table>
+                        </td>
+                    </tr>
+                }
+            </table>
+        </div>
+    </div>
+    <script>
+    </script>
+</body>
+</html>

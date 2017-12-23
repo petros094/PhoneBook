@@ -1,0 +1,40 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.25420.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PhoneBook.Web", "PhoneBook.Web\PhoneBook.Web.csproj", "{ACC09395-17B1-4E17-A692-306A872F9A1D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PhoneBook.DAL", "PhoneBook.DAL\PhoneBook.DAL.csproj", "{7497721A-9F52-4BDC-AF33-BAFA1E85E3BE}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PhoneBook.Common", "PhoneBook.Common\PhoneBook.Common.csproj", "{C4922404-DA54-4C7A-BFEF-D90B2B7EACCD}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PhoneBook.BLL", "PhoneBook.BLL\PhoneBook.BLL.csproj", "{7523FD8D-3F56-4FE2-9B9D-2E9C674A593E}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{ACC09395-17B1-4E17-A692-306A872F9A1D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{ACC09395-17B1-4E17-A692-306A872F9A1D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{ACC09395-17B1-4E17-A692-306A872F9A1D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{ACC09395-17B1-4E17-A692-306A872F9A1D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7497721A-9F52-4BDC-AF33-BAFA1E85E3BE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7497721A-9F52-4BDC-AF33-BAFA1E85E3BE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7497721A-9F52-4BDC-AF33-BAFA1E85E3BE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7497721A-9F52-4BDC-AF33-BAFA1E85E3BE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C4922404-DA54-4C7A-BFEF-D90B2B7EACCD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C4922404-DA54-4C7A-BFEF-D90B2B7EACCD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C4922404-DA54-4C7A-BFEF-D90B2B7EACCD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C4922404-DA54-4C7A-BFEF-D90B2B7EACCD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7523FD8D-3F56-4FE2-9B9D-2E9C674A593E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7523FD8D-3F56-4FE2-9B9D-2E9C674A593E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7523FD8D-3F56-4FE2-9B9D-2E9C674A593E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7523FD8D-3F56-4FE2-9B9D-2E9C674A593E}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

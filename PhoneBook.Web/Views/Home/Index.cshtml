@@ -1,0 +1,80 @@
+﻿@model IEnumerable<PhoneBook.Common.DTO.ContactDTO>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<div class="container">
+    <div class="tex1">
+        <hr />
+        <div class="row">
+            <div class="col-md-12">
+                <div class="panel-footer">
+                    <form class="form-inline" action="/Home/AddContact" method="post">
+                        <div class="form-group">
+                            <span>Name：</span>
+                            <input type="text" class="form-control" name="name" maxlength="99">
+                        </div>
+                        <div class="form-group">
+                            <span>Phone number：</span>
+                            <input type="number" class="form-control" name="phone" placeholder="XXX-XXX-XXX">
+                        </div>
+                        <div class="form-group">
+                            <span>E-mail：</span>
+                            <input type="email" id="email" name="email" class="form-control" placeholder="example@gmail.com">
+                        </div>
+                        <button type="submit" class="btn btn-primary">
+                            <span class="glyphicon glyphicon-thumbs-up"></span> Add Contact
+                        </button>
+
+                    </form>
+                </div>
+            </div>
+            <hr />
+            <table class="table">
+                <th>Contact Name </th>
+                <th>Feilds</th>
+                <th>Actions</th>
+                @foreach (var contact in Model)
+                {
+                    <tr>
+                        <td>@contact.Name</td>
+                        <td>
+                            <table class="table">
+                                @foreach (var feild in contact.ContactFields)
+                                {
+                                    <tr>
+                                        <td>@feild.Field</td>
+                                        <td>@feild.Value</td>
+                                    </tr>
+                                }
+                            </table>
+                        </td>
+                        <td>
+                            <input type="button" value="Edit" data-value="@contact.Id" onclick="location.href='/Home/EditContact?id=@contact.Id'" class="btn btn-group edit" />
+                            <input type="button" value="Delete" data-value="@contact.Id" onclick="location.href='/Home/DeleteContact?id=@contact.Id'" class="btn btn-group delete" @*onclick="deletecontact(@contact.Id)*@ />
+                        </td>
+                    </tr>
+                }
+            </table>
+            <div class="panel panel-info">
+                <div class="panel-heading">
+                    <div class="text-center">
+                        @for (var i = 1; i <= ViewBag.Count; i++)
+                        {
+                            if (ViewBag.pageNum == i)
+                            {
+                                <a class="btn btn-info active" href="@Url.Action("Index","Home", new { pageNumber = i, pagesize = 5 })">@i</a>
+                            }
+                            else
+                            {
+                                <a class="btn btn-default" href="@Url.Action("Index","Home", new { pageNumber = i, pagesize = 5 })">@i</a>
+                            }
+                        }
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
